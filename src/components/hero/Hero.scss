@@ -1,0 +1,114 @@
+@import '/src/styles/breakpoints.scss';
+@import '/src/styles/variables.scss';
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+
+    &-top{
+        display: flex;
+        margin: 0 auto;
+        max-width: 600px;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+       
+        &-title{
+            font-size: $title;
+            padding: 5px;
+        }
+        @include md{
+            &-title{
+                font-size:$titleMQ;
+            }
+        }
+        
+        &-subtitle{
+            font-size: $subtitle;
+            padding: 10px;
+            line-height: 1.6rem;
+        }
+        @include md{
+            &-subtitle{
+                padding: 5px;
+                font-size: 16px;
+            }
+        }
+        button{
+            margin: 10px 0;
+        }
+    } 
+        // end of hero-top
+       &-bottom{
+        margin-top: 20px;
+        margin: 0 auto;
+        &-content{
+            width: 100%;
+            @include lg{
+                &{
+                    display: grid;
+                    align-items: center;
+                    justify-content: center;
+                    grid-template-columns:repeat(auto-fit,minmax(250px,1fr))
+                }
+                &-iphone{
+                    padding: 20px;
+                    width: 200px;
+                }
+                &-ipad{
+                    padding: 20px;
+                    width: 300px;
+                }
+                &-watch{
+                    padding: 20px;
+                    width: 300px;
+                }
+                &-mac{
+                    padding: 20px;
+                    width: 500px;
+                }
+                &-airpods{
+                    padding: 20px;
+                    width: 200px;
+                }
+            }
+            @include md{
+                &{
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                }
+                &-iphone{
+                    padding: 20px;
+                    width: 200px;
+                }
+                &-ipad{
+                    padding: 20px;
+                    width: 300px;
+                }
+                &-watch{
+                    padding: 20px;
+                    width: 300px;
+                }
+                &-mac{
+                    padding: 20px;
+                    width: 500px;
+                }
+                &-airpods{
+                    padding: 20px;
+                    width: 200px;
+                }
+            }   // end of md media query
+           
+        }
+       } 
+}
+.child{
+    flex: 1 0 21%;
+}
+

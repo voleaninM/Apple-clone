@@ -1,0 +1,109 @@
+@import '/src/styles/breakpoints.scss';
+@import '/src/styles/variables.scss';
+
+.navbar{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+   
+    // apple logo
+    &-navigation li:first-child{
+        font-size: 70px;
+    }
+    @include md{
+        &-navigation li:first-child{
+            font-size: 50px;
+        }
+    }
+    // apple logo
+
+    
+    
+    // navigation menu starts
+    &-navigation {
+        display: flex;
+        align-items: center;
+        li{
+            transition: all ease .5s;
+            padding: 10px 45px;
+        } 
+        li:hover{
+            border-radius:12px;
+            background-color: rgba($color: white, $alpha: .2);
+        }
+
+    }   @include md{
+        &-navigation{
+            position: fixed;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            left: -100%;
+            background: black;
+            width: 100%;
+            height: 100%;
+            transition: ease all .5s;
+        }
+    }
+         // navigation menu ends 
+
+
+    // ul links
+    &-search{
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        cursor: pointer;
+        input{
+            outline: none;
+            padding: 6px;
+            border-radius: 12px;
+            border: none;
+        }
+    }
+    
+    @include md{
+        &-search{
+            z-index: 10;
+            position: fixed;
+            top: 55px;
+            right: 90px;
+            font-size: 40px;
+            input{
+                width:300px;
+            }
+        }
+    }
+    // ul links
+
+    // hamburger menu
+    &-hamburger{
+        display: none;
+    }
+    @include md{
+        &-hamburger{
+            display: block;
+            z-index: 10;
+            position: fixed;
+            top: 52px;
+            right: 40px;
+            font-size: 40px;
+        }
+    }
+    
+}
+.navbar-navigation.active{
+    left:0;
+}
+
+@include md{
+    .navbar.active{
+        height: 100vh;
+    }
+}
+

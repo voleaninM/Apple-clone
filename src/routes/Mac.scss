@@ -1,0 +1,91 @@
+@import '../styles/breakpoints.scss';
+@import '../styles/variables.scss';
+.mac{
+    background-image: $mac;
+    height: 100vh;
+    @include lg{
+        height: 100%;
+    }
+
+    &-content{
+        display: flex;
+        align-items:flex-start;
+        justify-content: center;
+        width: 100%;
+        max-width: 1240px;
+        margin: 0 auto;
+        padding-top: 40px;
+        text-align: center;
+        z-index: 1111;
+        @include md{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &-left{
+            padding: 30px;
+
+            &-title{
+                font-weight: 700;
+                font-size: $title;
+                @include md{
+                    font-size: $titleMQ;
+                }
+            }
+            &-subtitle{
+                font-size: $subtitle;
+                padding: 20px;
+            }
+            button:hover{
+                background-color: #004e92;
+            }
+        }
+        // left ends
+
+        &-right-img{
+            width: 550px;
+            height: auto;
+            @include md{
+                width:500px;
+            }
+        }
+        // img ends
+        &-right-prices{
+            display: flex;
+            @include md{
+                flex-direction: column;
+               
+            }
+
+            &-item{
+                padding: 20px 15px;
+                border-right: 1px solid white;
+                @include md{
+                    border-right: none;
+                    border-top:1px solid white ;
+                }
+                p{
+                    font-size:14px;
+                    padding:5px;
+                }
+            }
+            &-item.last{
+                border: none;
+                @include md{
+                    border-top:1px solid white ;
+                }
+            }
+            &-item.first{
+                @include md{
+                    border-top:none;
+                }
+            }
+
+            button:hover{
+                background-color: #000428;
+            }
+        }
+        
+    }
+}

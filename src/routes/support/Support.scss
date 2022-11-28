@@ -1,0 +1,124 @@
+@import '../../styles/breakpoints.scss';
+@import '../../styles/variables.scss';
+
+
+.support{
+    background-image: $support;
+    height: 100vh;
+    @include lg{
+        height: 100%;
+    }
+
+    &-container{
+        width: 100%;
+        max-width: 1240px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 40px;
+        &-header{
+            font-size: 40px;
+            padding: 20px;
+        }
+
+        &-main{
+            display: grid;
+            grid-template-columns:1fr 2fr;
+           
+            @include lg{
+                display: flex;
+                flex-direction: column;
+                align-items:center;
+                width: 100%;
+                margin-top: 40px;
+                padding-bottom: 10px;
+            }
+            gap: 40px;
+
+           
+            &-left{
+                display: flex;
+                flex-direction: column;
+                margin-top: 20px;
+                
+                &-number{
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+                    padding: 20px 200px 20px 10px;
+                    background-color: #8D5185;
+                    border-radius:12px;
+                     p{
+                        margin-left:15px ;
+                     }
+                }
+                &-mail{
+                    display: flex;
+                    cursor: pointer;
+                    align-items: center;
+                    padding: 20px 200px 20px 10px;
+                    background-color: #8D5185;
+                    margin-top: 10px;
+                    border-radius:12px;
+                    p{
+                        margin-left:15px ;
+                     }
+                }
+                &-location{
+                    display: flex;
+                    cursor: pointer;
+                    align-items: center;
+                    padding: 20px 200px 20px 10px;
+                    background-color: #8D5185;
+                    margin-top: 10px;
+                    border-radius:12px;
+                    p{
+                        margin-left:15px ;
+                     }
+                }
+                &-support{
+                    border-radius:12px;
+                    margin-top: 10px;
+                    background: rgba($color: white, $alpha: .1);
+                    h1,p{
+                        padding: 5px;
+                    }
+                    button{
+                        margin-left: 5px;
+                        padding: 10px;
+                    }
+                    button:hover{
+                        background-color: #8D5185;
+                    }
+                }
+                
+            }// main left ends
+            &-right{
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                input,textarea{
+                    padding: 15px;
+                    border: none;
+                    border-radius: 12px;
+                }
+                button{
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 20px;
+                    width: 30%;
+                }
+                button:hover{
+                    background-color: #8D5185;
+                }
+                label{
+                    font-size: 20px;
+                    padding: 5px;
+                }
+            }
+        } 
+        
+    }
+}

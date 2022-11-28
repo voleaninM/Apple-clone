@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+$poppins: 'Poppins', sans-serif;
+// bg colors
+$watchbg:#C8DCE5;
+$mac:linear-gradient(90deg, #000428, #004e92);
+$iphone:linear-gradient(90deg, #A29BFE, #000000);
+$watch:linear-gradient(90deg, #8693AB, #BDD4E7);
+$support:linear-gradient(90deg, #A1BAFE, #8D5185);
+$homebg:linear-gradient(90deg, rgba(170,170,170,1) 0%, rgba(74,74,74,1) 100%);
+// font-sizes
+$title:50px;
+$titleMQ:40px;
+$subtitle:20px;
+
+// button
+$button:scale(1.1);
+$buttonTransition: ease all .5s;
+$text:white;

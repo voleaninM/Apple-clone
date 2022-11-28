@@ -1,0 +1,116 @@
+@import '../../styles/breakpoints.scss';
+@import '../../styles/variables.scss';
+.watch{
+    background-image: $watch;
+    height: 100vh;
+    @include lg{
+        height: 100%;
+    }
+
+    &-content{
+        display: flex;
+        align-items:flex-start;
+        justify-content: center;
+        width: 100%;
+        max-width: 1240px;
+        margin: 0 auto;
+        padding-top: 30px;
+        text-align: center;
+        z-index: 1111;
+        @include md{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &-left{
+            padding: 30px 30px 0 30px;
+
+            &-logo{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              div{
+               font-size: 25px;
+               text-align: center;
+              }
+            }
+
+            &-title{
+                font-weight: 700;
+                font-size: $title;
+                @include md{
+                    font-size: $titleMQ;
+                }
+            }
+            &-subtitle{
+                font-size: $subtitle;
+                padding: 20px;
+            }
+            button:hover{
+                background-color: #8693AB;
+            }
+            &-info{
+                padding: 30px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                h3{
+                   padding: 10px; 
+                   line-height:30px;
+                }
+                button{
+                    margin-top: 10px;
+                }
+            }
+        }
+        // left ends
+
+        &-right-img{
+            width: 250px;
+            height: auto;
+            @include md{
+                width:300px;
+                margin-top: 30px;
+            }
+        }
+        // img ends
+        &-right-prices{
+            display: flex;
+            @include md{
+                flex-direction: column;
+               
+            }
+
+            &-item{
+                padding: 12px;
+                border-right: 1px solid white;
+                @include md{
+                    border-right: none;
+                    border-top:1px solid white ;
+                }
+                p{
+                    font-size:14px;
+                    padding:5px;
+                }
+            }
+            &-item.last{
+                border: none;
+                @include md{
+                    border-top:1px solid white ;
+                }
+            }
+            &-item.first{
+                @include md{
+                    border-top:none;
+                }
+            }
+
+            button:hover{
+                background-color: #BDD4E7;
+            }
+        }
+        
+    }
+}
