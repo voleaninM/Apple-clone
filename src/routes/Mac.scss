@@ -3,7 +3,7 @@
 .mac{
     background-image: $mac;
     height: 100vh;
-    @include lg{
+    @include md{
         height: 100%;
     }
 

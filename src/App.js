@@ -11,7 +11,7 @@ function App() {
   const location = useLocation()
   return (
     <AnimatePresence
-    exitBeforeEnter
+    wait
     >
       <Routes location={location} key={location.pathname}>
           <Route path='/' element={<Home/>}/>
