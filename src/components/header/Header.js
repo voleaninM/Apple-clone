@@ -4,7 +4,7 @@ import {AiFillApple,AiOutlineSearch} from 'react-icons/ai'
 import {RiShoppingBag3Line} from 'react-icons/ri'
 import {FaBars, FaTimes} from 'react-icons/fa'
 import {TbMinusVertical} from 'react-icons/tb'
-import { NavLink, useNavigate } from 'react-router-dom' 
+import { Link, NavLink, useNavigate } from 'react-router-dom' 
  
 export default function Header() {
     const navigate = useNavigate()
@@ -61,7 +61,7 @@ export default function Header() {
       <div className='navbar-search'>
       {search?<input onKeyDown={handleInput} /> : <AiOutlineSearch onClick={handleSearch}/>}    
         <TbMinusVertical />
-        <RiShoppingBag3Line />
+        <Link to={'/cart'}><RiShoppingBag3Line /></Link>
       </div>
       <div className='navbar-hamburger' onClick={handleClick}>
         {click? <FaTimes/>:<FaBars/>}

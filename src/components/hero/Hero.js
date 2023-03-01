@@ -6,11 +6,16 @@ import Ipad from '../../images/ipad.png'
 import Mac from '../../images/mac.png'
 import Airpods from '../../images/airpods.png'
 import Iwatch from '../../images/watch.png'
-
+import { motion } from 'framer-motion'
 
 export default function Hero() {
   return (
-    <div className='hero'> 
+    <motion.div
+      initial={{opacity:0}}
+    animate={{opacity:1}}
+    exit={{opacity:0}}
+    transition={{duration:.5}}
+     className='hero'> 
       <div className='hero-top'>
         <h1 className='hero-top-title'>Apple shopping event</h1>
         <p className='hero-top-subtitle'>From November 25 to 28,
@@ -26,6 +31,6 @@ export default function Hero() {
           <img src={Mac} alt='mac' className='hero-bottom-content-mac child'  width={450}></img>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }

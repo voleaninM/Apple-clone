@@ -3,6 +3,7 @@ import Header from '../components/header/Header';
 import './Mac.scss'
 import MacBook from '../images/mac.png';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 export default function Mac() {
   return (
@@ -22,7 +23,7 @@ export default function Mac() {
             <p className='mac-content-left-subtitle'>
                 From $1199
             </p>
-            <button>Buy Now</button>
+            <Link to={'/shop'}><button>Shop Now</button></Link>
         </div>
         <div className='mac-content-right'>
         <motion.img 
@@ -40,19 +41,19 @@ export default function Mac() {
                     <h3>MacBook Air</h3>
                     <p>M1 Chip</p>
                     <p className=''>From 999$</p>
-                    <button>Buy</button>
+                    <Link to={'/shop'}><button>Shop</button></Link>
                 </div>
                 <div className='mac-content-right-prices-item'>
                 <h3>MacBook Air</h3>
                     <p>M2 Chip</p>
                     <p>From 1209$</p>
-                    <button>Buy</button>
+                    <Link to={'/shop'}><button>Shop</button></Link>
                 </div>
                 <div className='mac-content-right-prices-item last'>
                 <h3>MacBook Pro 13</h3>
                     <p>M1 Chip</p>
                     <p>From 1299$</p>
-                    <button>Buy</button>
+                    <Link to={'/shop'}><button>Shop</button></Link>
                 </div>
             </div>
         </div>

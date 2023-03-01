@@ -3,6 +3,7 @@ import Header from '../../components/header/Header'
 import IphoneRoute from '../../images/iphoneRoute.png'
 import './Iphone.scss'
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 
 export default function Iphone() {
@@ -23,7 +24,7 @@ export default function Iphone() {
             <p className='iphone-content-left-subtitle'>
             From $33.29/mo. for 24 mo. or $799 before trade‑in1.
             </p>
-            <button>Buy Now</button>
+            <Link to={'/shop'}><button>Shop</button></Link>
             <div className='iphone-content-left-info'>
                <h3> Get 3 months of Apple TV+ free
                 when you buy an iPhone.</h3>
@@ -45,19 +46,19 @@ export default function Iphone() {
                     <h3>Iphone 14</h3>
                     <p>A total powerhouse.</p>
                     <p className=''>From $799</p>
-                    <button>Buy</button>
+                    <Link to={'/shop'}><button>Shop</button></Link>
                 </div>
                 <div className='iphone-content-right-prices-item'>
                 <h3>Iphone 14 Pro</h3>
                     <p>The ultimate iPhone.</p>
                     <p>From $999</p>
-                    <button>Buy</button>
+                    <Link to={'/shop'}><button>Shop</button></Link>
                 </div>
                 <div className='iphone-content-right-prices-item last'>
                 <h3>Iphone 13</h3>
                     <p>As amazing as ever.</p>
                     <p>From $599</p>
-                    <button>Buy</button>
+                    <Link to={'/shop'}><button>Shop</button></Link>
                 </div>
             </div>
         </div>

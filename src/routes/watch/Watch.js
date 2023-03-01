@@ -4,6 +4,7 @@ import watchRoute from '../../images/watchRoute.png'
 import './Watch.scss'
 import {AiFillApple} from 'react-icons/ai'
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 export default function Watch() {
   return (
@@ -27,7 +28,7 @@ export default function Watch() {
           <p className='watch-content-left-subtitle'>
           From $33.29/mo. for 24 mo. or $799 before trade‑in1.
           </p>
-          <button>Buy Now</button>
+          <Link to={'/shop'}><button>Shop now</button></Link>
           <div className='watch-content-left-info'>
              <h3>Family members who don‘t have an iPhone can stay in touch with Apple Watch.</h3>
               <button>Try it Free </button>
@@ -46,17 +47,17 @@ export default function Watch() {
               <div className='watch-content-right-prices-item first'>
                   <h3>Apple Watch Series 8</h3>
                   <p >From $399</p>
-                  <button>Buy</button>
+                  <Link to={'/shop'}><button>Shop</button></Link>
               </div>
               <div className='watch-content-right-prices-item'>
               <h3>Apple Watch SE 2022</h3>
                   <p>From $249</p>
-                  <button>Buy</button>
+                  <Link to={'/shop'}><button>Shop</button></Link>
               </div>
               <div className='watch-content-right-prices-item last'>
               <h3>Apple Watch Ultra</h3>
                   <p>From $599</p>
-                  <button>Buy</button>
+                  <Link to={'/shop'}><button>Shop</button></Link>
               </div>
           </div>
       </div>
